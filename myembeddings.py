@@ -5,8 +5,8 @@ from TTS.tts.utils.managers import EmbeddingManager
 
 use_cuda = torch.cuda.is_available()
 
-model_path = "https://github.com/coqui-ai/TTS/releases/download/speaker_encoder_model/model_se.pth.tar"
-config_path = "https://github.com/coqui-ai/TTS/releases/download/speaker_encoder_model/config_se.json"
+model_path = "models/model_se.pth.tar"
+config_path = "models/config_se.config_se.json"
 
 encoder_manager = EmbeddingManager(
     encoder_model_path=model_path,
@@ -14,6 +14,6 @@ encoder_manager = EmbeddingManager(
     use_cuda=use_cuda,
 )
 
-audio_file = "test.wav"
+audio_file = "test.aac"
 embedd = encoder_manager.compute_embedding_from_clip(audio_file)
 print(embedd)
