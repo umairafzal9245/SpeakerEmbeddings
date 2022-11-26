@@ -6,7 +6,7 @@ import scipy.io.wavfile
 import scipy.signal
 import soundfile as sf
 
-from TTS.tts.utils.helpers import StandardScaler
+from TTS.utils.helpers import StandardScaler
 from TTS.utils.audio.numpy_transforms import compute_f0
 
 # pylint: disable=too-many-public-methods

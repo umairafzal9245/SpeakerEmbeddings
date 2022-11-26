@@ -3,7 +3,7 @@ import torch
 from torch.nn import functional as F
 
 try:
-    from TTS.tts.utils.monotonic_align.core import maximum_path_c
+    from TTS.utils.monotonic_align.core import maximum_path_c
 
     CYTHON = True
 except ModuleNotFoundError:

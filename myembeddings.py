@@ -1,7 +1,7 @@
 import os
 import torch
 
-from TTS.tts.utils.managers import EmbeddingManager
+from TTS.utils.managers import EmbeddingManager
 
 use_cuda = torch.cuda.is_available()
 
@@ -13,6 +13,8 @@ encoder_manager = EmbeddingManager(
     encoder_config_path=config_path,
     use_cuda=use_cuda,
 )
+
+print('hy')
 
 audio_file = "test.aac"
 embedd = encoder_manager.compute_embedding_from_clip(audio_file)
