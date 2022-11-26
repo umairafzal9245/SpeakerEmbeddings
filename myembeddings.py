@@ -7,7 +7,6 @@ use_cuda = torch.cuda.is_available()
 
 model_path = "https://github.com/coqui-ai/TTS/releases/download/speaker_encoder_model/model_se.pth.tar"
 config_path = "https://github.com/coqui-ai/TTS/releases/download/speaker_encoder_model/config_se.json"
-old_file = ""   # previous embeddings file 
 
 encoder_manager = EmbeddingManager(
     encoder_model_path=model_path,

@@ -13,16 +13,7 @@ from TTS.utils.audio import AudioProcessor
 
 class EmbeddingManager():
 
-    def __init__(
-        self,
-        embedding_file_path: Union[str, List[str]] = "",
-        id_file_path: str = "",
-        encoder_model_path: str = "",
-        encoder_config_path: str = "",
-        use_cuda: bool = False,
-    ):
-        super().__init__(id_file_path=id_file_path)
-
+    def __init__(self,encoder_model_path: str = "",encoder_config_path: str = "",use_cuda: bool = False):
         self.encoder = None
         self.encoder_ap = None
         self.use_cuda = use_cuda
